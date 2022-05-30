@@ -13,6 +13,7 @@
 		748335C32841DDFF008505CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 748335C22841DDFF008505CD /* Preview Assets.xcassets */; };
 		748335CA2845644C008505CD /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748335C92845644C008505CD /* Order.swift */; };
 		748335CC28456819008505CD /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748335CB28456819008505CD /* AddressView.swift */; };
+		748335CE28456948008505CD /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748335CD28456948008505CD /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		748335C22841DDFF008505CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		748335C92845644C008505CD /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		748335CB28456819008505CD /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		748335CD28456948008505CD /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				748335BB2841DDFE008505CD /* P10_CupcakeCornerApp.swift */,
 				748335BD2841DDFE008505CD /* ContentView.swift */,
 				748335CB28456819008505CD /* AddressView.swift */,
+				748335CD28456948008505CD /* CheckoutView.swift */,
 				748335C92845644C008505CD /* Order.swift */,
 				748335BF2841DDFF008505CD /* Assets.xcassets */,
 				748335C12841DDFF008505CD /* Preview Content */,
@@ -145,6 +148,7 @@
 			files = (
 				748335CA2845644C008505CD /* Order.swift in Sources */,
 				748335CC28456819008505CD /* AddressView.swift in Sources */,
+				748335CE28456948008505CD /* CheckoutView.swift in Sources */,
 				748335BE2841DDFE008505CD /* ContentView.swift in Sources */,
 				748335BC2841DDFE008505CD /* P10_CupcakeCornerApp.swift in Sources */,
 			);
