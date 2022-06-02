@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-class Order: ObservableObject , Codable{
+struct Order: Codable{
 	static let types = ["Vanilla", "Strawberry","Chocolate", "Rainbow"]
 	
-	@Published var type = 0
-	@Published var quantity = 3
-	@Published var specialRequestEnabled = false {
+	var type = 0
+	var quantity = 3
+	var specialRequestEnabled = false {
 		didSet {
 			if specialRequestEnabled == false {
 				extraFrosting = false
@@ -21,16 +21,21 @@ class Order: ObservableObject , Codable{
 		}
 		
 	}
-	@Published var extraFrosting = false
-	@Published var addSprinkles = false
+	var extraFrosting = false
+	var addSprinkles = false
 	
-	@Published var name = ""
-	@Published var streetAddress = ""
-	@Published var city = ""
-	@Published var zip = ""
+	var name = ""
+	var streetAddress = ""
+	var city = ""
+	var zip = ""
 	
 	var hasValidAddress : Bool {
 		if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
+			return false
+		}
+		
+		//Challenge 52-1
+		if name.contains(" ") || streetAddress.contains(" ") || city.contains(" ") || zip.contains(" ") {
 			return false
 		}
 		return true
@@ -70,7 +75,7 @@ class Order: ObservableObject , Codable{
 		
 	}
 	
-	required init(from decoder: Decoder ) throws {
+	init(from decoder: Decoder ) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		type = try container.decode(Int.self, forKey: .type)
 		quantity = try container.decode(Int.self, forKey: .quantity)
@@ -83,4 +88,8 @@ class Order: ObservableObject , Codable{
 	}
 	
 	init() { }
+}
+
+class CupCake:ObservableObject{
+	@Published var order = Order()
 }
